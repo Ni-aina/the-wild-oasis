@@ -59,6 +59,7 @@ const CabinRow = ({ cabin }) => {
     maxCapacity,
     regularPrice,
     discount,
+    description,
     image
   } = cabin;
 
@@ -68,6 +69,7 @@ const CabinRow = ({ cabin }) => {
       maxCapacity,
       regularPrice,
       discount,
+      description,
       image
     })
   }

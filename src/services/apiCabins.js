@@ -17,7 +17,7 @@ export async function createEditCabin(newCabin, id) {
     // check image type
     const hasImage = typeof newCabin.image === "string" && newCabin.image.startsWith(supabaseUrl);
 
-    const imageName = hasImage && `${Math.random()}-${newCabin.image.name}`.replaceAll("/", "");
+    const imageName = `${Math.random()}-${newCabin.image.name}`.replaceAll("/", "");
     const imagePath = hasImage ? newCabin.image : `${supabaseUrl}/storage/v1/object/public/cabin-images/${imageName}`
     
     let query = supabase.from('cabins')
