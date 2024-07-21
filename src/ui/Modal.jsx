@@ -74,13 +74,13 @@ const Open = ({ children, opens: opensWindowName })=> {
 const Window = ({ children, name }) => {
 
   const { openName, close } = useContext(ModalContext);
-  const { refModal } = UseClickOutside({ close });
+  const { ref } = UseClickOutside({ close });
 
   if (name !== openName) return null;
 
   return createPortal( 
     <Overlay>
-      <StyledModal ref={refModal}>
+      <StyledModal ref={ref}>
         <Button onClick={close}>
           <HiXMark />
         </Button>

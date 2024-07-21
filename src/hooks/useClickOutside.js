@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 
 const UseClickOutside = ({ close }) => {
-    const refModal = useRef();
+    const ref = useRef();
 
     useEffect(()=> {
         const handleClick = (e)=> {
-        if (refModal.current && !refModal.current.contains(e.target)) 
+        if (ref.current && !ref.current.contains(e.target)) 
             close(); 
         }
 
@@ -15,7 +15,7 @@ const UseClickOutside = ({ close }) => {
     }, [close])
     
     return {
-        refModal
+        ref
     }
 }
  
