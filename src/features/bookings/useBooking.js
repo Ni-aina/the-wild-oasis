@@ -10,7 +10,7 @@ const useBooking = () => {
         error,
         isLoading
     } = useQuery({
-        queryKey: [`booking/${bookingId}`],
+        queryKey: ['booking', bookingId],
         queryFn: () => getBooking(bookingId),
         retry: false
     })

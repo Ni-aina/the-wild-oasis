@@ -1,9 +1,7 @@
 import BookingDetail from "../features/bookings/BookingDetail";
 
-const Booking = () => {
-    return (  
-        <BookingDetail />
-    )
+function Booking() {
+  return <BookingDetail />;
 }
- 
+
 export default Booking;
