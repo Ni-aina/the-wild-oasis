@@ -9,7 +9,7 @@ import ButtonText from "../../ui/ButtonText";
 import Spinner from "../../ui/Spinner";
 
 import { useMoveBack } from "../../hooks/useMoveBack";
-import useBooking from "../bookings/useBooking";
+import { useBooking } from "../bookings/useBooking";
 import { useEffect, useState } from "react";
 import Checkbox from "../../ui/Checkbox";
 import { formatCurrency } from "../../utils/helpers";
