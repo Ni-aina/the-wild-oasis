@@ -17,7 +17,8 @@ const UseRecentStays = () => {
     return {
         isLoading,
         stays,
-        confirmedStays
+        confirmedStays,
+        numDays
     }
 }
  
