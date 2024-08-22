@@ -95,9 +95,10 @@ const Toggle = ({ id })=> {
   } = useContext(MenusContext);
 
   const handleClick = (e)=> {
+    e.stopPropagation();
     const rect = e.target.closest('button').getBoundingClientRect();
     setPosition({
-      x: window.innerWidth - rect.left + 10,
+      x: window.innerWidth - (rect.left + 10),
       y: rect.top
     })
     openId === "" || openId !== id ? open(id) : close();

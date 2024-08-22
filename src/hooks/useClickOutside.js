@@ -9,9 +9,9 @@ const UseClickOutside = ({ close }) => {
             close(); 
         }
 
-        document.addEventListener('click', handleClick, true);
+        document.addEventListener('click', handleClick);
 
-        return ()=> document.removeEventListener('click', handleClick, true);
+        return ()=> document.removeEventListener('click', handleClick);
     }, [close])
     
     return {
